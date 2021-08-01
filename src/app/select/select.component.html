@@ -1,16 +1,16 @@
-<div class="title">
-    <span>Responsável Nível {{responsavel.nivel}}:</span>
-</div>
-<form [formGroup]="formulario">
+<div class="title" [formGroup]="formGroup">
+    <div>
+        <span>Responsável Nível {{responsavel.nivel}}:</span>
+    </div>
     <div class="select">
-        <select mat-select class="form-select" (change)="selectChangeHandler($event)">
-            <option value="Escolha um responsável" selected disabled>
+        <select class="form-select" (change)="selectChangeHandler($event)" [formControlName]="controlName">
+            <option value="" >
                 Escolha um responsável
             </option>
-            <option *ngFor="let nome of nomes"value="Nível: {{responsavel.nivel}} - {{nome}}">
+            <option *ngFor="let nome of nomes" value="Nível: {{responsavel.nivel}} - {{nome}}">
                 {{nome}}
             </option>
         </select> 
     </div>
-</form>
+</div>
 

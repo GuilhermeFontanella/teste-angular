@@ -11,11 +11,11 @@
                     </div>
                     <div class="select row">
                         <div class="col" *ngFor="let responsavel of responsaveis">
-                            <app-select
+                            <app-select 
                             [responsavel]=responsavel
-                            (clear)="limparCampos($event)"
-                            controlName="select"
-                            ></app-select>        
+                            controlName="selectResponsaveis"
+                            [formGroup]="inputResponsaveis"
+                            ></app-select>       
                         </div>
                     </div>
                     <div class="expsansivel col">

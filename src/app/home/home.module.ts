@@ -18,7 +18,6 @@ import { CardDadosGlobaisComponent } from '../card-dados-globais/card-dados-glob
 import { DadosGlobaisComponent } from '../dados-globais/dados-globais.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-
 @NgModule({
   declarations: [
     HomeComponent, 
@@ -27,7 +26,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SelectComponent, 
     ExpansivelComponent, 
     CardDadosGlobaisComponent, 
-    DadosGlobaisComponent
+    DadosGlobaisComponent, 
   ],
   imports: [
     CommonModule,

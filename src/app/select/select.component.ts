@@ -1,5 +1,5 @@
 import { Component, Input,  OnInit } from '@angular/core';
-import { FormControl, FormBuilder } from '@angular/forms';
+import { FormControl, FormBuilder, FormGroup, AbstractControl } from '@angular/forms';
 
 @Component({
   selector: 'app-select',
@@ -8,22 +8,21 @@ import { FormControl, FormBuilder } from '@angular/forms';
 })
 export class SelectComponent implements OnInit {
   @Input() responsavel: any;
-  @Input() formulario: any;
+  @Input() formGroup!: FormGroup;
+  @Input() controlName: string = '';
 
   nomes: string = '';
 
-  select = new FormControl('')
-
   constructor(
-    private formBuilder: FormBuilder
-  ) { }
+  
+  ) { this.nomes }
 
   ngOnInit(): void {
     this.nomes = this.responsavel.nome;
+  }
 
-    this.formulario = this.formBuilder.group({
-      nivel: [this.nomes],
-    });
+  get formControl(): AbstractControl {
+    return this.formGroup.controls[this.controlName];
   }
 
   selectChangeHandler(event: any) {
