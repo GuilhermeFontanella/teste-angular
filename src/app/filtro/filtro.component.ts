@@ -1,7 +1,6 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { Component, EventEmitter, OnInit, Output, ViewChild, Input } from '@angular/core';
 import { Responsavel } from '../models/responsavel.model';
-import { PipelinesService } from '../pipelines/pipelines.service';
+import { FiltroService } from './filtro.service';
 
 @Component({
   selector: 'app-filtro',
@@ -9,48 +8,17 @@ import { PipelinesService } from '../pipelines/pipelines.service';
   styleUrls: ['./filtro.component.css']
 })
 export class FiltroComponent implements OnInit {
-  @Output() clear = new EventEmitter();
-
+  @Output() clear = new EventEmitter();  
+  
+  responsaveis: Responsavel[] = [];
   filtro: string = "FILTRO";
 
-  responsaveis: Array<Responsavel> = [ 
-    {
-      nivel: 3,
-      nome: [
-        "Aviões do Forró",
-        "Chiclete com Banana",
-        "Araketu",
-        "É o tchan"
-      ]
-    },
-    {
-      nivel: 2,
-      nome: [
-        "Tom Jobim",
-        "Elis Regina",
-        "Chico Buarque",
-        "Djavan"
-      ],
-    },
-    {
-      nivel: 1,
-      nome: [
-        "Pink Floyd",
-        "Queen",
-        "Red Hot Chilli Pepers",
-        "Iron Maiden"
-      ],
-    }
-  ];
-
-  formulario!: FormGroup;
-
   constructor(
-    
+    private service: FiltroService,
   ) { }
 
   ngOnInit(): void {
-    
+    this.responsaveis = this.service.getResponsaveis();
   }
 
   filtrar(object: Responsavel[]) {

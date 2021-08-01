@@ -1,6 +1,4 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-import {MatSnackBar} from '@angular/material/snack-bar';
-import { PipelinesService } from './pipelines.service';
 
 @Component({
   selector: 'app-pipelines',

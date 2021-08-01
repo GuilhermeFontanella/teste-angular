@@ -1,7 +1,7 @@
 <mat-card >
     <div class="container">
         <div class="filtro">
-            <form mat-form>
+            <form>
                 <mat-card-header>
                     <mat-card-title>{{filtro}}</mat-card-title>
                 </mat-card-header>
@@ -14,7 +14,7 @@
                             <app-select
                             [responsavel]=responsavel
                             (clear)="limparCampos($event)"
-                            [formulario]=formulario
+                            controlName="select"
                             ></app-select>        
                         </div>
                     </div>
@@ -25,19 +25,8 @@
                 <mat-card-footer class="container">
                     <mat-card-content>
                         <div class="buttons">
-                            <button 
-                            mat-button type="submit" 
-                            (click)="filtrar(responsaveis)"
-                            >
-                            Filtrar
-                            </button>
-                            <button 
-                            mat-button 
-                            type="submit" 
-                            (clear)="limparCampos($event)"
-                            >
-                            Limpar
-                            </button> 
+                            <button mat-button type="submit" (click)="filtrar(responsaveis)">Filtrar</button>
+                            <button mat-button type="reset">Limpar</button> 
                         </div>  
                     </mat-card-content>
                 </mat-card-footer>
