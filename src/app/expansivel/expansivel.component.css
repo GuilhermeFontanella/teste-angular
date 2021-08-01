@@ -1,0 +1,27 @@
+mat-expansion-panel-header {
+    margin-top: 20px;
+    padding-right: 0px;
+    padding-left: 0px !important;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+mat-panel-title {
+    margin: 0px;
+    align-items: center;
+}
+.toggle {
+    margin-top: 5px;
+}
+.title {
+    flex-wrap: nowrap;
+    max-width: 150px;
+    width: 100%;
+}
+
+.line {
+    height: 1px;
+    background-color: rgb(197, 197, 197);
+    width: 100%;
+}

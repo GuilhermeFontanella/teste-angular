@@ -1,0 +1,38 @@
+mat-card {
+    box-shadow: 0px 2px 10px rgb(173, 173, 173);
+    max-width: 1100px;
+    margin: auto;
+    margin-top: 20px;
+}
+mat-card-title {
+    font-size: 20px;
+    font-weight: 600;
+}
+mat-card-footer {
+    padding: 0px;
+}
+.select {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
+.buttons {
+    text-align: end;
+}
+
+.buttons button:first-child {
+    background-color: rgb(0, 158, 11);
+    color: azure;
+}
+.buttons button:last-child {
+    margin-left: 10px;
+    background-color: rgb(238, 238, 238);
+    color: rgb(124, 124, 124);
+}
+.buttons button:hover:first-child {
+    background-color: green;
+}
+.buttons button:hover:last-child {
+    background-color: rgb(202, 202, 202);
+}
