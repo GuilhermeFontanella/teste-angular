@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-dados-globais',
@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dados-globais.component.css']
 })
 export class DadosGlobaisComponent implements OnInit {
+  @Input() dado: any;
 
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }
