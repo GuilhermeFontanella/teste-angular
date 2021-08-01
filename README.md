@@ -1,6 +1,6 @@
 # TesteAngular
 
-### O código contém dados mockados alocados nos serviços, mas caso haja a interesse em conecta-lo a um json server, por exemplo, os metodos Http (get, post, put e delete) estão definidos e implementados, estão apenas comentados.
+### O código contém dados mockados alocados nos serviços, mas caso haja interesse em conecta-lo a um json server, por exemplo, os metodos Http (get, post, put e delete) estão definidos e implementados. Estão apenas comentados.
 
 ### Talvez seja necessário instalar dependências para que o código rode corretamente. Para isso, dentro da pasta do projeto, no prompt de comando digite o comando: npm install
 
