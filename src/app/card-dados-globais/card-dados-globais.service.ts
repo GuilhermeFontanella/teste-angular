@@ -1,10 +1,16 @@
 import { Injectable } from '@angular/core';
 import { DadosGlobais } from '../models/dados-globais.model';
+/*
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+*/
 
 @Injectable({
   providedIn: 'root'
 })
 export class CardDadosGlobaisService {
+
+  //baseUrl = "http://servidor:port/database"
 
   dadosGlobais: Array<DadosGlobais> = [
     {
@@ -38,9 +44,17 @@ export class CardDadosGlobaisService {
     
   ];
 
-  constructor() { }
+  constructor(
+    //private http: HttpClient
+  ) { }
 
   getDadosGlobais() {
     return this.dadosGlobais;
   }
+
+  /*
+  getDadosGlobais(): Observable<DadosGlobais[]> {
+    return this.http.get<DadosGlobais[]>(baseUrl);
+  }
+  */
 }

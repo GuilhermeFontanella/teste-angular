@@ -7,13 +7,13 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 })
 export class PipelinesComponent implements OnInit {
   @Output() submit = new EventEmitter();
+  pipelineTitle: string = "PIPELINES";
+  pipilineOfertaButton: string = "Cadastrar Pipeline Oferta";
+  pipilineCustomizadoButton: string = "Cadastrar Pipeline Customizado";
 
-  constructor(
-    
-  ) { }
+  constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
   cadastrar(event: any) {
     this.submit.emit();

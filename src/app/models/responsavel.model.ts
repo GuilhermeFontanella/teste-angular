@@ -1,4 +1,4 @@
 export interface Responsavel {
     nivel: number;
-    nome: Array<any>;
+    nome: Array<string>;
 }

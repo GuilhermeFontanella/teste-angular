@@ -6,6 +6,8 @@ import { Responsavel } from '../models/responsavel.model';
 })
 export class FiltroService {
 
+  //baseUrl = "http://servidor:port/database2"
+
   responsaveis: Array<Responsavel> = [ 
     {
       nivel: 3,
@@ -36,10 +38,17 @@ export class FiltroService {
     }
   ];
 
-  constructor() { }
+  constructor(
+    //private http: HttpClient
+  ) { }
 
   getResponsaveis() {
     return this.responsaveis;
   }
+  /*
+  getResponsaveis(): Observable<Responsavel[]> {
+    return this.http.get<Responsavel[]>(baseUrl);
+  }
+  */
 
 }

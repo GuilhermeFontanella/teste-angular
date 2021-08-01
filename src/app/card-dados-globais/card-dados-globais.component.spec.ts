@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { CardDadosGlobaisComponent } from './card-dados-globais.component';
 
 describe('CardDadosGlobaisComponent', () => {

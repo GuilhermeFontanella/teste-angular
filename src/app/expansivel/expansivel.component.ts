@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-expansivel',
@@ -6,15 +6,19 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
   styleUrls: ['./expansivel.component.css']
 })
 export class ExpansivelComponent implements OnInit {
-  
-
   panelOpenState = false;
+  panel: string = "FILTRO AVANÇADO"
+  panelOpen: string = "Painel Expandido"
 
   constructor() { }
 
-  ngOnInit(): void {    
+  ngOnInit(): void { }
+
+  event(event: MouseEvent) {
+    if(this.panelOpenState === false) {
+      this.panelOpenState = true;
+    } else if (this.panelOpenState === true) {
+      this.panelOpenState = false;
+    };
   }
-
-
-
 }

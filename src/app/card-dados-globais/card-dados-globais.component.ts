@@ -10,15 +10,16 @@ import { CardDadosGlobaisService } from './card-dados-globais.service';
 export class CardDadosGlobaisComponent implements OnInit {
   dado: DadosGlobais[] = []
 
-  constructor(
-    private service: CardDadosGlobaisService
-  ) { }
+  constructor(private service: CardDadosGlobaisService) { }
 
   ngOnInit(): void {
     this.getDadosGlobais();    
   }
 
   getDadosGlobais() {
+    //this.service.getDadosGlobais().subscribe(result => {
+    //  this.dado = result;  
+    //});
     return this.dado = this.service.getDadosGlobais();
   }
 

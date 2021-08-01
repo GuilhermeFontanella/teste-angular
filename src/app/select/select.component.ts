@@ -1,5 +1,5 @@
 import { Component, Input,  OnInit } from '@angular/core';
-import { FormControl, FormBuilder, FormGroup, AbstractControl } from '@angular/forms';
+import { FormGroup, AbstractControl } from '@angular/forms';
 
 @Component({
   selector: 'app-select',
@@ -13,9 +13,7 @@ export class SelectComponent implements OnInit {
 
   nomes: string = '';
 
-  constructor(
-  
-  ) { this.nomes }
+  constructor() { }
 
   ngOnInit(): void {
     this.nomes = this.responsavel.nome;
@@ -28,5 +26,4 @@ export class SelectComponent implements OnInit {
   selectChangeHandler(event: any) {
     console.log(event.target.value);  
   }
-
 }
