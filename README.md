@@ -1,5 +1,11 @@
 # TesteAngular
 
+### O código contém dados mockados alocados nos serviços, mas caso haja a interesse em conecta-lo a um json server, por exemplo, os metodos Http (get, post, put e delete) estão definidos e implementados, estão apenas comentados.
+
+### Talvez seja necessário instalar dependências para que o código rode corretamente. Para isso, dentro da pasta do projeto, no prompt de comando digite o comando: npm install
+
+### *aprimoramentos podem ser implementados, mas acredito para um MVP, o código atual esteja de acordo com o que foi solicitado.*
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.4.
 
 ## Development server
